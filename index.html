@@ -1,13 +1,11 @@
-<!-- update v2 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Veerbhadra Enterprises</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -17,212 +15,172 @@ body{
   color:#222;
 }
 
-/* HEADER */
-header{
-  position:fixed;
-  top:10px;
-  left:10px;
-  right:10px;
-  background:rgba(255,255,255,0.8);
-  backdrop-filter:blur(10px);
-  border-radius:15px;
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  background:#fff;
+  padding:10px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 15px;
-  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo{
-  font-weight:600;
+nav h2{
+  font-size:18px;
 }
 
 nav a{
-  margin:0 8px;
+  margin-left:15px;
   text-decoration:none;
   color:#333;
   font-size:14px;
 }
 
-.btn{
-  padding:10px 16px;
-  border-radius:10px;
-  text-decoration:none;
-}
-
-.primary{
-  background:#c8a46b;
-  color:#fff;
-}
-
-.secondary{
-  background:#555;
-  color:#fff;
-}
-
 /* HERO */
 .hero{
-  padding-top:90px;
   text-align:center;
+  padding:30px 20px;
 }
 
 .hero img{
   width:100%;
-  border-radius:12px;
+  border-radius:10px;
 }
 
 .hero h1{
-  font-family:'Playfair Display';
-  font-size:34px;
-  margin:15px 0;
+  font-family:"Playfair Display";
+  font-size:32px;
+  margin:20px 0;
 }
 
 .hero p{
-  font-size:15px;
+  font-size:14px;
   color:#555;
 }
 
+.btn{
+  display:block;
+  margin:10px auto;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  width:80%;
+  max-width:250px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:#c8a46b;
+  color:#fff;
+}
+
+.btn-dark{
+  background:#444;
+  color:#fff;
+}
+
 /* SECTION */
-section{
+.section{
   padding:30px 20px;
 }
 
-.title{
-  font-family:'Playfair Display';
-  font-size:28px;
+.section h2{
+  font-family:"Playfair Display";
+  font-size:26px;
 }
 
 /* CARDS */
 .card{
   background:#fff;
-  padding:20px;
-  border-radius:15px;
+  border-radius:12px;
+  padding:15px;
   margin-top:20px;
 }
 
 .card img{
   width:100%;
-  border-radius:12px;
-  margin-top:10px;
+  border-radius:10px;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:30px;
+  padding:20px;
   background:#fff;
+  margin-top:30px;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">Veerbhadra Enterprises</div>
-
+<!-- NAVBAR -->
 <nav>
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+  <h2>Veerbhadra</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<a href="https://wa.me/918712301878" class="btn primary">Order</a>
-</header>
-
 <!-- HERO -->
-<section class="hero" id="home">
+<section id="home" class="hero">
+  <img src="https://images.unsplash.com/photo-1606925797303-7e3c4b5b8b91?auto=format&fit=crop&w=1200&q=80">
 
-<img src="https://images.unsplash.com/photo-1606925797303-efec0c5d4a7e">
+  <h1>Fresh Quality You Can Taste</h1>
 
-<h1>Fresh Quality You Can Taste</h1>
+  <p>Dry fruits, spices, and seeds available at our store. Contact us for details.</p>
 
-<p>
-Dry fruits, spices, and seeds available at our store.
-Contact us to check availability.
-</p>
+  <button class="btn btn-primary"
+  onclick="window.open('https://wa.me/91XXXXXXXXXX','_blank')">
+  Order on WhatsApp
+  </button>
 
-<a href="https://wa.me/918712301878" class="btn primary">Order on WhatsApp</a>
-<br><br>
-<a href="tel:8712301878" class="btn secondary">Call Us</a>
-
+  <button class="btn btn-dark"
+  onclick="window.location.href='tel:+91XXXXXXXXXX'">
+  Call Us
+  </button>
 </section>
 
 <!-- PRODUCTS -->
-<section id="products">
+<section id="products" class="section">
+  <h2>Our Products</h2>
 
-<h2 class="title">Our Products</h2>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1606923829579-0cb981a83e2d?auto=format&fit=crop&w=800&q=80">
+    <h3>Almonds & Nuts</h3>
+    <p>Almonds, cashews, and more.</p>
+  </div>
 
-<div class="card">
-<h3>Almonds & Nuts</h3>
-<p>Available at store.</p>
-<img src="https://images.unsplash.com/photo-1604908176997-431f2e7fcbdf">
-</div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?auto=format&fit=crop&w=800&q=80">
+    <h3>Spices</h3>
+    <p>Turmeric, cardamom, and other spices.</p>
+  </div>
 
-<div class="card">
-<h3>Spices</h3>
-<p>Available at store.</p>
-<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924">
-</div>
-
-<div class="card">
-<h3>Seeds & More</h3>
-<p>Available at store.</p>
-<img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e">
-</div>
-
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-
-<h2 class="title">About Us</h2>
-
-<p>
-Veerbhadra Enterprises has been operating for the past 4 years.
-We offer a range of dry fruits, spices, and seeds at our store.
-Customers can visit directly and purchase products.
-</p>
-
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=800&q=80">
+    <h3>Seeds</h3>
+    <p>Healthy seeds for daily use.</p>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-
-<h2 class="title">Contact</h2>
-
-<p>📞 8712301878</p>
-<p>📲 WhatsApp available</p>
-
-<p>
-Visit our store or contact us before visiting.
-</p>
-
-<a href="https://wa.me/918712301878" class="btn primary">Order Now</a>
-
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>📍 Your Shop Location (you will give link)</p>
+  <p>📞 +91XXXXXXXXXX</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>© Veerbhadra Enterprises</p>
+  <p>© Veerbhadra Enterprises</p>
 </footer>
-
-<a href="https://wa.me/918712301878" class="whatsapp">💬</a>
 
 </body>
 </html>
